@@ -32,7 +32,7 @@ def create_upload_data(  # noqa: C901
     bucket_url = get_bucket_endpoint_url(bucket, region)
     expires_in = datetime.utcnow() + timedelta(seconds=60 * 5)
     expires = expires_in.strftime("%Y-%m-%dT%H:%M:%S.000Z")
-    now_date = datetime.utcnow().strftime("%Y%m%dT%H%M%S000Z")
+    now_date = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
     raw_date = datetime.utcnow().strftime("%Y%m%d")
 
     policy_dict: dict[str, Any] = {
